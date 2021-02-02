@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+</head>
+<body>
+    <h1>Главная</h1>
+    <h3>Новости</h3>
+    <ul>
+        {% for item in object_list.news %}
+        <li><a href={{item[1]}}>{{item[0]}}</a></li>
+        {% endfor %}
+    </ul>
+    <h3>Специальные предложения</h3>
+    <ul>
+        {% for item in object_list.hot_offers %}
+        <li><a href={{item[1]}}>{{item[0]}}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
