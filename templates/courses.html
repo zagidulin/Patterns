@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Курсы</title>
+</head>
+<body>
+    <h1>Courses</h1>
+    <ul>
+        {% for course in object_list %}
+        <li><a href={{course.href}}>{{course.name}}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
