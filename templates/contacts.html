@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+</head>
+<body>
+    {% for page in pages %}
+        <a href={{page.href}}>{{page.title}}</a>
+    {% endfor %}
+    <h1>Контакты</h1>
+    <h3>Напишите нам</h3>
+    <form method="post">
+        <input type="text" name="name" placeholder="Ваше имя" style="width: 200px; height: 25px; margin-bottom: 5px" class="user">
+        <input type="text" name="email" placeholder="Ваш e-mail" required style="width: 200px; height: 25px; margin-bottom: 10px" class="user" id="email"><br>
+        <input type="text" name="title" placeholder="Тема сообщения" required style="width: 404px; height: 25px; margin-bottom: 5px" class="user" id="email"><br>
+        <textarea name="message" placeholder="Ваше сообщение" required style="width: 406px; height: 75px;" class="user"></textarea><br>
+        <input type="submit"> <input type="reset">
+    </form>
+</body>
+</html>
