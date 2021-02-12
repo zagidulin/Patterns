@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+    Категории
+{% endblock %}
+{% block body %}
+    {% include "inc_main_menu.html" %}
+    <h1>Категории</h1>
+    <ul>
+        {% for category in object_list %}
+        <li><a href="/category/?cat={{ category.alias }}">{{ category.category }}</a></li>
+        {% endfor %}
+    </ul><br>
+    <a href="#">Создать категорию</a>
+{% endblock %}

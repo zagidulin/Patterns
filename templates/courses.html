@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+    Категории
+{% endblock %}
+{% block body %}
+    {% include "inc_main_menu.html" %}
+    <h1>Курсы в категории</h1>
+    <ul>
+        {% for course in object_list %}
+        <li><a href="{{ course[1] }}">{{ course[0] }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
